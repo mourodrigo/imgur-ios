@@ -1,7 +1,7 @@
 import Foundation
 
 class ImgurAPI {
-    static private let authorization = "Client-ID 74696750d7c2c15"
+    static let authorization = "Client-ID 74696750d7c2c15"
     static private let endpoint = "https://api.imgur.com/3/"
 
     enum resourceURL {
