@@ -6,7 +6,12 @@ class AFRequest: APIRequest {
     func get(url: URL, onSuccess: @escaping APIResponseSuccess, onError: @escaping ErrorClosure) {
         print("Request to \(url)")
 
-        AF.request(url).responseData { (response) in
+        let headers: HTTPHeaders = [
+            "Authorization": ImgurAPI.authorization,
+            "Accept": "application/json"
+        ]
+
+        AF.request(url, headers: headers).responseData { (response) in
                 if let error = response.error {
                     onError(error)
                     return
