@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A93C0991BBF4D37FD5AF9CA /* Pods_imgur_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13CA61D85E4AF5FF97EA647 /* Pods_imgur_iosTests.framework */; };
+		303DF12C2513E1FD00B82B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12B2513E1FD00B82B0D /* AppDelegate.swift */; };
+		303DF12E2513E1FD00B82B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */; };
+		303DF1302513E1FD00B82B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12F2513E1FD00B82B0D /* ViewController.swift */; };
+		303DF1332513E1FD00B82B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1312513E1FD00B82B0D /* Main.storyboard */; };
+		303DF1352513E1FF00B82B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1342513E1FF00B82B0D /* Assets.xcassets */; };
+		303DF1382513E1FF00B82B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */; };
+		303DF1432513E1FF00B82B0D /* imgur_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF1422513E1FF00B82B0D /* imgur_iosTests.swift */; };
+		303DF14E2513E1FF00B82B0D /* imgur_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF14D2513E1FF00B82B0D /* imgur_iosUITests.swift */; };
+		9D8516624B146A85AB26CCAB /* Pods_imgur_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7530D623D2C9271F61A653A0 /* Pods_imgur_ios.framework */; };
+		D1F4DC83583E8858795519D9 /* Pods_imgur_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A46C52A1BCAED8BEDEC58A0 /* Pods_imgur_iosUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		303DF13F2513E1FF00B82B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 303DF1202513E1FD00B82B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 303DF1272513E1FD00B82B0D;
+			remoteInfo = "imgur-ios";
+		};
+		303DF14A2513E1FF00B82B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 303DF1202513E1FD00B82B0D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 303DF1272513E1FD00B82B0D;
+			remoteInfo = "imgur-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		218F82C6B366ABB7DB3E10BD /* Pods-imgur-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-iosTests.release.xcconfig"; path = "Target Support Files/Pods-imgur-iosTests/Pods-imgur-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E7ACF517260A71AFDEC00C1 /* Pods-imgur-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-imgur-iosUITests/Pods-imgur-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		303DF1282513E1FD00B82B0D /* imgur-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303DF12B2513E1FD00B82B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		303DF12F2513E1FD00B82B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		303DF1322513E1FD00B82B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		303DF1342513E1FF00B82B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		303DF1372513E1FF00B82B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		303DF1392513E1FF00B82B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303DF13E2513E1FF00B82B0D /* imgur-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "imgur-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303DF1422513E1FF00B82B0D /* imgur_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_iosTests.swift; sourceTree = "<group>"; };
+		303DF1442513E1FF00B82B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		303DF1492513E1FF00B82B0D /* imgur-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "imgur-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303DF14D2513E1FF00B82B0D /* imgur_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgur_iosUITests.swift; sourceTree = "<group>"; };
+		303DF14F2513E1FF00B82B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC82D1400EFDBFF53087E3B /* Pods-imgur-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-ios.release.xcconfig"; path = "Target Support Files/Pods-imgur-ios/Pods-imgur-ios.release.xcconfig"; sourceTree = "<group>"; };
+		6A46C52A1BCAED8BEDEC58A0 /* Pods_imgur_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imgur_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7530D623D2C9271F61A653A0 /* Pods_imgur_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imgur_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F5C4310AA48F22D71D1447 /* Pods-imgur-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-ios.debug.xcconfig"; path = "Target Support Files/Pods-imgur-ios/Pods-imgur-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		A40C8C1F624C1B1828A35A7B /* Pods-imgur-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-imgur-iosTests/Pods-imgur-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE042B54AF1FD66EC1BEA202 /* Pods-imgur-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-imgur-iosUITests/Pods-imgur-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F13CA61D85E4AF5FF97EA647 /* Pods_imgur_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imgur_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		303DF1252513E1FD00B82B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8516624B146A85AB26CCAB /* Pods_imgur_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF13B2513E1FF00B82B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A93C0991BBF4D37FD5AF9CA /* Pods_imgur_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF1462513E1FF00B82B0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1F4DC83583E8858795519D9 /* Pods_imgur_iosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		303DF11F2513E1FD00B82B0D = {
+			isa = PBXGroup;
+			children = (
+				303DF12A2513E1FD00B82B0D /* imgur-ios */,
+				303DF1412513E1FF00B82B0D /* imgur-iosTests */,
+				303DF14C2513E1FF00B82B0D /* imgur-iosUITests */,
+				303DF1292513E1FD00B82B0D /* Products */,
+				447F6F9DC1217B67DE3E3C70 /* Pods */,
+				4A671E21DDA07C4D2F7DB929 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		303DF1292513E1FD00B82B0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				303DF1282513E1FD00B82B0D /* imgur-ios.app */,
+				303DF13E2513E1FF00B82B0D /* imgur-iosTests.xctest */,
+				303DF1492513E1FF00B82B0D /* imgur-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		303DF12A2513E1FD00B82B0D /* imgur-ios */ = {
+			isa = PBXGroup;
+			children = (
+				303DF12B2513E1FD00B82B0D /* AppDelegate.swift */,
+				303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */,
+				303DF12F2513E1FD00B82B0D /* ViewController.swift */,
+				303DF1312513E1FD00B82B0D /* Main.storyboard */,
+				303DF1342513E1FF00B82B0D /* Assets.xcassets */,
+				303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */,
+				303DF1392513E1FF00B82B0D /* Info.plist */,
+			);
+			path = "imgur-ios";
+			sourceTree = "<group>";
+		};
+		303DF1412513E1FF00B82B0D /* imgur-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				303DF1422513E1FF00B82B0D /* imgur_iosTests.swift */,
+				303DF1442513E1FF00B82B0D /* Info.plist */,
+			);
+			path = "imgur-iosTests";
+			sourceTree = "<group>";
+		};
+		303DF14C2513E1FF00B82B0D /* imgur-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				303DF14D2513E1FF00B82B0D /* imgur_iosUITests.swift */,
+				303DF14F2513E1FF00B82B0D /* Info.plist */,
+			);
+			path = "imgur-iosUITests";
+			sourceTree = "<group>";
+		};
+		447F6F9DC1217B67DE3E3C70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92F5C4310AA48F22D71D1447 /* Pods-imgur-ios.debug.xcconfig */,
+				3FC82D1400EFDBFF53087E3B /* Pods-imgur-ios.release.xcconfig */,
+				A40C8C1F624C1B1828A35A7B /* Pods-imgur-iosTests.debug.xcconfig */,
+				218F82C6B366ABB7DB3E10BD /* Pods-imgur-iosTests.release.xcconfig */,
+				2E7ACF517260A71AFDEC00C1 /* Pods-imgur-iosUITests.debug.xcconfig */,
+				CE042B54AF1FD66EC1BEA202 /* Pods-imgur-iosUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A671E21DDA07C4D2F7DB929 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7530D623D2C9271F61A653A0 /* Pods_imgur_ios.framework */,
+				F13CA61D85E4AF5FF97EA647 /* Pods_imgur_iosTests.framework */,
+				6A46C52A1BCAED8BEDEC58A0 /* Pods_imgur_iosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		303DF1272513E1FD00B82B0D /* imgur-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303DF1522513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-ios" */;
+			buildPhases = (
+				F9FAAF7158DE22780CC8E7D9 /* [CP] Check Pods Manifest.lock */,
+				303DF1242513E1FD00B82B0D /* Sources */,
+				303DF1252513E1FD00B82B0D /* Frameworks */,
+				303DF1262513E1FD00B82B0D /* Resources */,
+				04AFEC40BA90209C1EAFD8D5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "imgur-ios";
+			productName = "imgur-ios";
+			productReference = 303DF1282513E1FD00B82B0D /* imgur-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		303DF13D2513E1FF00B82B0D /* imgur-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303DF1552513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-iosTests" */;
+			buildPhases = (
+				11E591BB054A658CA9ABD8AE /* [CP] Check Pods Manifest.lock */,
+				303DF13A2513E1FF00B82B0D /* Sources */,
+				303DF13B2513E1FF00B82B0D /* Frameworks */,
+				303DF13C2513E1FF00B82B0D /* Resources */,
+				064E34B1C1A8F7E6D300DDA4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				303DF1402513E1FF00B82B0D /* PBXTargetDependency */,
+			);
+			name = "imgur-iosTests";
+			productName = "imgur-iosTests";
+			productReference = 303DF13E2513E1FF00B82B0D /* imgur-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		303DF1482513E1FF00B82B0D /* imgur-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 303DF1582513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-iosUITests" */;
+			buildPhases = (
+				D06F74FB03D956E1781078D9 /* [CP] Check Pods Manifest.lock */,
+				303DF1452513E1FF00B82B0D /* Sources */,
+				303DF1462513E1FF00B82B0D /* Frameworks */,
+				303DF1472513E1FF00B82B0D /* Resources */,
+				45547FC2CFD5816801B15FCD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				303DF14B2513E1FF00B82B0D /* PBXTargetDependency */,
+			);
+			name = "imgur-iosUITests";
+			productName = "imgur-iosUITests";
+			productReference = 303DF1492513E1FF00B82B0D /* imgur-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		303DF1202513E1FD00B82B0D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = mourodrigo;
+				TargetAttributes = {
+					303DF1272513E1FD00B82B0D = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					303DF13D2513E1FF00B82B0D = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 303DF1272513E1FD00B82B0D;
+					};
+					303DF1482513E1FF00B82B0D = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 303DF1272513E1FD00B82B0D;
+					};
+				};
+			};
+			buildConfigurationList = 303DF1232513E1FD00B82B0D /* Build configuration list for PBXProject "imgur-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 303DF11F2513E1FD00B82B0D;
+			productRefGroup = 303DF1292513E1FD00B82B0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				303DF1272513E1FD00B82B0D /* imgur-ios */,
+				303DF13D2513E1FF00B82B0D /* imgur-iosTests */,
+				303DF1482513E1FF00B82B0D /* imgur-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		303DF1262513E1FD00B82B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303DF1382513E1FF00B82B0D /* LaunchScreen.storyboard in Resources */,
+				303DF1352513E1FF00B82B0D /* Assets.xcassets in Resources */,
+				303DF1332513E1FD00B82B0D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF13C2513E1FF00B82B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF1472513E1FF00B82B0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04AFEC40BA90209C1EAFD8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-ios/Pods-imgur-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-ios/Pods-imgur-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-imgur-ios/Pods-imgur-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		064E34B1C1A8F7E6D300DDA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-iosTests/Pods-imgur-iosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-iosTests/Pods-imgur-iosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-imgur-iosTests/Pods-imgur-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11E591BB054A658CA9ABD8AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imgur-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45547FC2CFD5816801B15FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-iosUITests/Pods-imgur-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-imgur-iosUITests/Pods-imgur-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-imgur-iosUITests/Pods-imgur-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06F74FB03D956E1781078D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imgur-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9FAAF7158DE22780CC8E7D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-imgur-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		303DF1242513E1FD00B82B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303DF1302513E1FD00B82B0D /* ViewController.swift in Sources */,
+				303DF12C2513E1FD00B82B0D /* AppDelegate.swift in Sources */,
+				303DF12E2513E1FD00B82B0D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF13A2513E1FF00B82B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303DF1432513E1FF00B82B0D /* imgur_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		303DF1452513E1FF00B82B0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				303DF14E2513E1FF00B82B0D /* imgur_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		303DF1402513E1FF00B82B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 303DF1272513E1FD00B82B0D /* imgur-ios */;
+			targetProxy = 303DF13F2513E1FF00B82B0D /* PBXContainerItemProxy */;
+		};
+		303DF14B2513E1FF00B82B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 303DF1272513E1FD00B82B0D /* imgur-ios */;
+			targetProxy = 303DF14A2513E1FF00B82B0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		303DF1312513E1FD00B82B0D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				303DF1322513E1FD00B82B0D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				303DF1372513E1FF00B82B0D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		303DF1502513E1FF00B82B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		303DF1512513E1FF00B82B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		303DF1532513E1FF00B82B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F5C4310AA48F22D71D1447 /* Pods-imgur-ios.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		303DF1542513E1FF00B82B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC82D1400EFDBFF53087E3B /* Pods-imgur-ios.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		303DF1562513E1FF00B82B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A40C8C1F624C1B1828A35A7B /* Pods-imgur-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imgur-ios.app/imgur-ios";
+			};
+			name = Debug;
+		};
+		303DF1572513E1FF00B82B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218F82C6B366ABB7DB3E10BD /* Pods-imgur-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/imgur-ios.app/imgur-ios";
+			};
+			name = Release;
+		};
+		303DF1592513E1FF00B82B0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7ACF517260A71AFDEC00C1 /* Pods-imgur-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "imgur-ios";
+			};
+			name = Debug;
+		};
+		303DF15A2513E1FF00B82B0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE042B54AF1FD66EC1BEA202 /* Pods-imgur-iosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ATDGADGXBT;
+				INFOPLIST_FILE = "imgur-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mourodrigo.imgur-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "imgur-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		303DF1232513E1FD00B82B0D /* Build configuration list for PBXProject "imgur-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303DF1502513E1FF00B82B0D /* Debug */,
+				303DF1512513E1FF00B82B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303DF1522513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303DF1532513E1FF00B82B0D /* Debug */,
+				303DF1542513E1FF00B82B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303DF1552513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303DF1562513E1FF00B82B0D /* Debug */,
+				303DF1572513E1FF00B82B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		303DF1582513E1FF00B82B0D /* Build configuration list for PBXNativeTarget "imgur-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				303DF1592513E1FF00B82B0D /* Debug */,
+				303DF15A2513E1FF00B82B0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 303DF1202513E1FD00B82B0D /* Project object */;
+}
