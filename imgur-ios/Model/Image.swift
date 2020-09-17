@@ -1,7 +1,8 @@
 import Foundation
 
 struct Image: Codable {
-    let id, imageDescription: String
+    let id: String
+    let imageDescription: String?
     let datetime: Int
     let type: String
     let animated: Bool
