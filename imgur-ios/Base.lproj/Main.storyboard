@@ -44,12 +44,40 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n5g-Hs-4V4">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Cj-AA-akj">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="24" minimumInteritemSpacing="10" id="1Cj-AA-akj">
                                     <size key="itemSize" width="200" height="181"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" id="u0l-dU-xcJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qjm-NT-831">
+                                            <rect key="frame" x="108" y="370" width="198" height="112.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reload-1" translatesAutoresizingMaskIntoConstraints="NO" id="EJo-7N-OmX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="198" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="eZY-vr-bc1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oh, failed to load galleries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzo-2f-8PM">
+                                                    <rect key="frame" x="0.0" y="92" width="198" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.73725490196078436" green="0.73725490196078436" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="qjm-NT-831" firstAttribute="centerX" secondItem="u0l-dU-xcJ" secondAttribute="centerX" id="819-SN-7Bq"/>
+                                        <constraint firstItem="qjm-NT-831" firstAttribute="centerY" secondItem="u0l-dU-xcJ" secondAttribute="centerY" id="EcX-XA-itz"/>
+                                    </constraints>
+                                </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainGalleryCollectionViewCell" id="gFs-gI-PpW" customClass="MainGalleryCollectionViewCell" customModule="imgur_ios" customModuleProvider="target">
                                         <rect key="frame" x="53.5" y="0.0" width="307" height="181"/>
@@ -59,7 +87,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="je7-qX-J9o">
-                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="133"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="141"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mV0-Kx-SEF" customClass="View" customModule="imgur_ios" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="133" width="307" height="48"/>
@@ -135,6 +163,11 @@
                                                         <constraint firstItem="0dp-q5-5Vd" firstAttribute="top" secondItem="mV0-Kx-SEF" secondAttribute="top" id="avw-xd-SEl"/>
                                                         <constraint firstAttribute="height" constant="48" id="o6T-AA-dIX"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="6"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -147,8 +180,13 @@
                                                 <constraint firstItem="je7-qX-J9o" firstAttribute="leading" secondItem="4aa-Bz-hdC" secondAttribute="leading" id="qhb-we-pNj"/>
                                                 <constraint firstAttribute="trailing" secondItem="mV0-Kx-SEF" secondAttribute="trailing" id="v0A-7t-cpX"/>
                                                 <constraint firstItem="je7-qX-J9o" firstAttribute="leading" secondItem="4aa-Bz-hdC" secondAttribute="leading" id="yHI-Dq-Koo"/>
-                                                <constraint firstItem="mV0-Kx-SEF" firstAttribute="top" secondItem="je7-qX-J9o" secondAttribute="bottom" id="zIN-f5-joI"/>
+                                                <constraint firstItem="mV0-Kx-SEF" firstAttribute="top" secondItem="je7-qX-J9o" secondAttribute="bottom" constant="-8" id="zIN-f5-joI"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="7"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="307" height="181"/>
                                         <connections>
@@ -177,6 +215,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FWo-Ma-HaD"/>
                     <connections>
+                        <outlet property="backgroundView" destination="u0l-dU-xcJ" id="HVt-jg-eL3"/>
                         <outlet property="collectionView" destination="n5g-Hs-4V4" id="JO9-fD-Cqv"/>
                     </connections>
                 </viewController>
@@ -184,10 +223,45 @@
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="138.61607142857142"/>
         </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="1CF-xG-GtE">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="3Ff-va-lvE" customClass="LoadingViewController" customModule="imgur_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KAE-Iu-XNl">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reload" translatesAutoresizingMaskIntoConstraints="NO" id="FzE-gF-fZm">
+                                <rect key="frame" x="68" y="68" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="z6u-vQ-8Yq"/>
+                                    <constraint firstAttribute="width" constant="64" id="zgm-pL-1YD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26053100820000002" green="0.27268350120000001" blue="0.29604697229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FzE-gF-fZm" firstAttribute="centerY" secondItem="KAE-Iu-XNl" secondAttribute="centerY" id="VY7-o8-khM"/>
+                            <constraint firstItem="FzE-gF-fZm" firstAttribute="centerX" secondItem="KAE-Iu-XNl" secondAttribute="centerX" id="sgE-YI-1m6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HeI-Ma-jR1"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="200" height="200"/>
+                    <connections>
+                        <outlet property="imageView" destination="FzE-gF-fZm" id="aX4-OV-ayR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NTb-1W-LZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1667" y="104"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Icon material-remove-red-eye" width="19.5" height="13.5"/>
         <image name="Icon open-arrow-circle-top" width="16" height="16"/>
         <image name="comment" width="16" height="16"/>
+        <image name="reload" width="36.5" height="32.5"/>
+        <image name="reload-1" width="50" height="34.5"/>
     </resources>
 </document>
