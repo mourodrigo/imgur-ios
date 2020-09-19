@@ -12,6 +12,7 @@ def common_pods
   pod 'RxCocoa', '5.1.0'
   pod 'RxRelay', '5.1.0'
   pod 'RxGesture', '3.0.0'
+  pod 'SwiftyGif'
 end
 
 # Pods for the app
