@@ -14,6 +14,7 @@ protocol MainGalleryViewModelProtocol {
     var numberOfItems: Int { get }
     var state: Observable<MainGalleryStatus> { get }
     func fetch()
+    var moduleTitle: String { get }
 }
 
 class MainGalleryViewModel: MainGalleryViewModelProtocol {
@@ -27,6 +28,10 @@ class MainGalleryViewModel: MainGalleryViewModelProtocol {
     private let _state = BehaviorSubject<MainGalleryStatus>(value: .loading)
     private var _content = [GalleryContent]()
     var state: Observable<MainGalleryStatus> { return _state.asObserver() }
+
+    var moduleTitle: String {
+        return "Top Weekly"
+    }
 
     //************************************************
     // MARK: - Lifecycle
@@ -63,8 +68,9 @@ class MainGalleryViewModel: MainGalleryViewModelProtocol {
     }
 
     func didSelectItem(at index: Int) {
-//        _onMovieSelection(_movies[index], _genre)
-    }
+        let item = _content[index]
+        print(item)
+   }
 
     var numberOfItems: Int {
         return _content.count

@@ -3,14 +3,13 @@ import RxSwift
 import RxCocoa
 import RxGesture
 
-class MainGalleryViewController: UIViewController {
+class MainGalleryViewController: UICollectionViewController {
 
     @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
+//    @IBOutlet weak var collectionView: UICollectionView!
     private let _viewModel: MainGalleryViewModelProtocol = MainGalleryViewModel()
     private let _disposeBag = DisposeBag()
     private let refreshControl = UIRefreshControl()
-    private let refreshView = Storyboard.ViewControllers.loadingViewController.view!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +17,13 @@ class MainGalleryViewController: UIViewController {
     }
 
     private func setupOnLoad() {
+        self.navigationItem.title = _viewModel.moduleTitle
+
         self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+//        self.collectionView.dataSource = self
 
         refreshControl.tintColor = UIColor.white
-        self.collectionView.refreshControl = refreshControl
+//        self.collectionView.refreshControl = refreshControl
 
         refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
         self.refreshControl.beginRefreshing()
@@ -60,9 +61,9 @@ class MainGalleryViewController: UIViewController {
 // MARK: - UICollectionView Delegate
 //*************************************************
 
-extension MainGalleryViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+extension MainGalleryViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        _viewModel.didSelectItem(at: indexPath.row)
     }
 }
 
@@ -70,13 +71,13 @@ extension MainGalleryViewController: UICollectionViewDelegate {
 // MARK: - UICollectionView DataSource
 //*************************************************
 
-extension MainGalleryViewController: UICollectionViewDataSource {
+extension MainGalleryViewController {
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         _viewModel.numberOfItems
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let reuseIdentifier = "MainGalleryCollectionViewCell"
 
@@ -98,14 +99,34 @@ extension MainGalleryViewController: UICollectionViewDataSource {
 //*************************************************
 
 extension MainGalleryViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let containerWidth = self.view.frame.width
+
+        var width: Double {
+            let safeAreaInsets = UIApplication.shared.connectedScenes
+            .lazy
+            .filter { $0.activationState == .foregroundActive }
+            .compactMap { $0 as? UIWindowScene }
+            .first?
+            .windows
+            .first { $0.isKeyWindow }?
+            .safeAreaInsets
+
+            let screenSize = UIScreen.main.bounds.size
+            let isLandscape = screenSize.width > screenSize.height
+
+            let spacing = 24.0 // defined by design
+            let columns = isLandscape ? 2 : 1
+
+            let left = safeAreaInsets?.left ?? 0
+            let right = safeAreaInsets?.right ?? 0
+            let safeWidth = Double(screenSize.width - left - right)
+            return (safeWidth-spacing)/Double(columns)
+        }
+
+
         let aspectRatio = 1.44 //defined by design
-        let columns = UIDevice.current.orientation.isLandscape ? 2 : 1
 
-        let spacing = 24.0
-
-        let width = (Double(containerWidth)-spacing)/Double(columns)
         let height = width / aspectRatio
 
         return CGSize(width: width,
