@@ -15,7 +15,14 @@ class MainGalleryCollectionViewCell: UICollectionViewCell {
 
     func setup(content: GalleryContent) {
         _content = content
-        self.imageView.image = nil //avoiding misplaced content by cell reuse
+
+        //avoiding misplaced content by cell reuse
+        imageView.image = nil
+        playerController.view.removeFromSuperview()
+
+        upsLabel.text = "\(content.ups)"
+        viewsLabel.text = "\(content.views)"
+        commentLabel.text = "\(content.commentCount)"
 
         if content.availableMediaIsImage {
 
@@ -58,5 +65,7 @@ class MainGalleryCollectionViewCell: UICollectionViewCell {
         }
 
     }
+
+
 
 }

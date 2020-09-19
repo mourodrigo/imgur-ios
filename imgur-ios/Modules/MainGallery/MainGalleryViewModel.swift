@@ -13,6 +13,7 @@ protocol MainGalleryViewModelProtocol {
     func didSelectItem(at index: Int)
     var numberOfItems: Int { get }
     var state: Observable<MainGalleryStatus> { get }
+    func fetch()
 }
 
 class MainGalleryViewModel: MainGalleryViewModelProtocol {
@@ -39,9 +40,9 @@ class MainGalleryViewModel: MainGalleryViewModelProtocol {
     private func setup() {
         _galleryRepository?.state
             .bind(onNext: { [weak self] (value) in
-                self?._content.removeAll()
                 switch value {
                 case .success(content: let content):
+                    self?._content.removeAll()
                     self?._content.append(contentsOf: content)
                     self?._state.onNext(.success)
                 case .loading:
@@ -67,6 +68,10 @@ class MainGalleryViewModel: MainGalleryViewModelProtocol {
 
     var numberOfItems: Int {
         return _content.count
+    }
+
+    func fetch() {
+        _galleryRepository?.fetch()
     }
 
 }
