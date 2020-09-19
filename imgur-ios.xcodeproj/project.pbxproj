@@ -34,7 +34,7 @@
 		303DF1852514E9D900B82B0D /* SharedLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF1842514E9D900B82B0D /* SharedLocator.swift */; };
 		303DF189251529B400B82B0D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 303DF188251529B400B82B0D /* AVKit.framework */; };
 		30EA3F2E25153C8900A9AF70 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA3F2D25153C8900A9AF70 /* LoadingViewController.swift */; };
-		30EA3F3025153DE600A9AF70 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA3F2F25153DE600A9AF70 /* Storyboard.swift */; };
+		30EA3F32251671C100A9AF70 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EA3F31251671C100A9AF70 /* MediaType.swift */; };
 		9D8516624B146A85AB26CCAB /* Pods_imgur_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7530D623D2C9271F61A653A0 /* Pods_imgur_ios.framework */; };
 		D1F4DC83583E8858795519D9 /* Pods_imgur_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A46C52A1BCAED8BEDEC58A0 /* Pods_imgur_iosUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,7 +92,7 @@
 		303DF1862514F52600B82B0D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		303DF188251529B400B82B0D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		30EA3F2D25153C8900A9AF70 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		30EA3F2F25153DE600A9AF70 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		30EA3F31251671C100A9AF70 /* MediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaType.swift; sourceTree = "<group>"; };
 		3FC82D1400EFDBFF53087E3B /* Pods-imgur-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imgur-ios.release.xcconfig"; path = "Target Support Files/Pods-imgur-ios/Pods-imgur-ios.release.xcconfig"; sourceTree = "<group>"; };
 		6A46C52A1BCAED8BEDEC58A0 /* Pods_imgur_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imgur_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7530D623D2C9271F61A653A0 /* Pods_imgur_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imgur_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +215,7 @@
 				303DF16E2513EF8300B82B0D /* Image.swift */,
 				303DF1702513EFB200B82B0D /* GalleryContent.swift */,
 				303DF1722513EFF000B82B0D /* GalleryResponse.swift */,
+				30EA3F31251671C100A9AF70 /* MediaType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -234,7 +235,6 @@
 			children = (
 				303DF16C2513E81A00B82B0D /* CustomError.swift */,
 				303DF1662513E7D700B82B0D /* CustomTypes.swift */,
-				30EA3F2F25153DE600A9AF70 /* Storyboard.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -567,7 +567,6 @@
 				30EA3F2E25153C8900A9AF70 /* LoadingViewController.swift in Sources */,
 				303DF16B2513E7EF00B82B0D /* ImgurAPI.swift in Sources */,
 				303DF1852514E9D900B82B0D /* SharedLocator.swift in Sources */,
-				30EA3F3025153DE600A9AF70 /* Storyboard.swift in Sources */,
 				303DF16D2513E81A00B82B0D /* CustomError.swift in Sources */,
 				303DF15E2513E74D00B82B0D /* MainGalleryViewController.swift in Sources */,
 				303DF1602513E75A00B82B0D /* MainGalleryViewModel.swift in Sources */,
@@ -577,6 +576,7 @@
 				303DF1792513F44900B82B0D /* Data+.swift in Sources */,
 				303DF16F2513EF8300B82B0D /* Image.swift in Sources */,
 				303DF1822514E94400B82B0D /* ImageRepository.swift in Sources */,
+				30EA3F32251671C100A9AF70 /* MediaType.swift in Sources */,
 				303DF12E2513E1FD00B82B0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

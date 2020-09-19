@@ -17,6 +17,10 @@ struct GalleryContent: Codable {
         return images?.first?.link ?? link
     }
 
+    var mediaType: MediaType? {
+        return MediaType(value: images?.first?.type ?? type)
+    }
+
     var availableMediaIsImage: Bool {
         let mediaType = (images?.first?.type ?? type) ?? ""
         return mediaType.contains("image/jpeg") || mediaType.contains("image/png")

@@ -16,4 +16,8 @@ struct Image: Codable {
         case datetime, type, animated, width, height, size, views, link
         case mp4, gifv, hls
     }
+
+    var mediaType: MediaType? {
+        return MediaType(value: type)
+    }
 }
