@@ -1,6 +1,7 @@
 import UIKit
 import AVKit
-import SwiftyGif
+import RxSwift
+import RxCocoa
 
 class MainGalleryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
@@ -13,6 +14,8 @@ class MainGalleryCollectionViewCell: UICollectionViewCell {
     var avplayer: AVPlayer?
     let playerController = AVPlayerViewController()
     let imageRepository = SharedLocator.shared.imageRepository
+    private var onLoadError: Error?
+    private let _disposeBag = DisposeBag()
     private var _content: GalleryContent?
 
     func setup(content: GalleryContent) {
@@ -33,14 +36,19 @@ class MainGalleryCollectionViewCell: UICollectionViewCell {
                 return
             case .some(let someType):
                 switch someType {
-                case .image:
+                case .image, .gif:
                     setupImage(from: content)
                 case .video:
                     setupVideo(from: content)
-                case .gif:
-                    setupImage(from: content)
             }
         }
+
+        self.imageView.rx.tapGesture().when(.recognized).subscribe { [weak self] _ in
+            if self?.onLoadError != nil {
+                self?.setup(content: content)
+            }
+        }.disposed(by: _disposeBag)
+
 
     }
 
@@ -73,25 +81,19 @@ class MainGalleryCollectionViewCell: UICollectionViewCell {
 
             if url == resolvedURL {
                 print("Content loaded", String(describing: content.type), " ",url)
+                self?.imageView.contentMode = .scaleAspectFill
                 self?.imageView.image = image
                 self?.activityIndicator.stopAnimating()
             }
 
         }) { (error) in
-            self.imageView.image = nil
+            self.onLoadError = error
+            self.imageView.image = UIImage.init(named: "reload-1")
+            self.imageView.contentMode = .center
             print("Content NOT loaded", String(describing: self._content?.type), " ",url)
+            self.activityIndicator.stopAnimating()
+            self.imageView.backgroundColor = UIColor.gray
         }
-    }
-
-    private func setupGif(from content: GalleryContent) {
-        let link = content.availableMediaLink
-
-        guard let url = URL(string: link) else {
-                           print("There is no link to load")
-                           return
-               }
-
-        self.imageView.setGifFromURL(url)
     }
 
     override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

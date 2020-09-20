@@ -13,7 +13,6 @@
 		3033902F2517C8E900913E36 /* GalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033902E2517C8E900913E36 /* GalleryViewModelTests.swift */; };
 		303DF12C2513E1FD00B82B0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12B2513E1FD00B82B0D /* AppDelegate.swift */; };
 		303DF12E2513E1FD00B82B0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */; };
-		303DF1302513E1FD00B82B0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DF12F2513E1FD00B82B0D /* ViewController.swift */; };
 		303DF1332513E1FD00B82B0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1312513E1FD00B82B0D /* Main.storyboard */; };
 		303DF1352513E1FF00B82B0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1342513E1FF00B82B0D /* Assets.xcassets */; };
 		303DF1382513E1FF00B82B0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */; };
@@ -67,7 +66,6 @@
 		303DF1282513E1FD00B82B0D /* imgur-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "imgur-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		303DF12B2513E1FD00B82B0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		303DF12F2513E1FD00B82B0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		303DF1322513E1FD00B82B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		303DF1342513E1FF00B82B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		303DF1372513E1FF00B82B0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -176,10 +174,7 @@
 				303DF1622513E79C00B82B0D /* API */,
 				303DF1612513E76E00B82B0D /* Model */,
 				303DF15B2513E71300B82B0D /* Modules */,
-				303DF12F2513E1FD00B82B0D /* ViewController.swift */,
-				303DF1312513E1FD00B82B0D /* Main.storyboard */,
 				303DF1342513E1FF00B82B0D /* Assets.xcassets */,
-				303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */,
 				303DF1392513E1FF00B82B0D /* Info.plist */,
 			);
 			path = "imgur-ios";
@@ -282,6 +277,8 @@
 		303DF1832514E9C500B82B0D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				303DF1362513E1FF00B82B0D /* LaunchScreen.storyboard */,
+				303DF1312513E1FD00B82B0D /* Main.storyboard */,
 				303DF12B2513E1FD00B82B0D /* AppDelegate.swift */,
 				303DF12D2513E1FD00B82B0D /* SceneDelegate.swift */,
 				303DF1842514E9D900B82B0D /* SharedLocator.swift */,
@@ -574,7 +571,6 @@
 				303DF17E25140AF900B82B0D /* MainGalleryCollectionViewCell.swift in Sources */,
 				3033902B2517BEFA00913E36 /* MOCKED_APIRequests.swift in Sources */,
 				303DF1672513E7D700B82B0D /* CustomTypes.swift in Sources */,
-				303DF1302513E1FD00B82B0D /* ViewController.swift in Sources */,
 				3033902D2517BFC800913E36 /* MOCKED_APIResponses.swift in Sources */,
 				303DF1712513EFB200B82B0D /* GalleryContent.swift in Sources */,
 				303DF1732513EFF000B82B0D /* GalleryResponse.swift in Sources */,
