@@ -68,9 +68,16 @@ class MainGalleryViewModel: MainGalleryViewModelProtocol {
                     self?._state.onNext(.loading)
                 case .error(error: let error):
                     self?._state.onNext(.error(error: error))
+                    self?.retryFetch()
                 }
             })
             .disposed(by: _disposeBag)
+    }
+
+    private func retryFetch() {
+        DispatchQueue.global().asyncAfter(deadline: .now()+1) {
+            self.fetch()
+        }
     }
 
     //************************************************

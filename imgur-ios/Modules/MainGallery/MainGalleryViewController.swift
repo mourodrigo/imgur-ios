@@ -25,16 +25,15 @@ class MainGalleryViewController: UICollectionViewController {
 
         self.collectionView.delegate = self
 
-//        refreshControl.tintColor = UIColor.white
-//        collectionView.refreshControl = refreshControl
-//
-//        refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
-//        self.refreshControl.beginRefreshing()
+        refreshControl.tintColor = UIColor.white
+        collectionView.refreshControl = refreshControl
+
+        refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
 
         _viewModel.state.bind { (status) in
             DispatchQueue.main.async {
                 self.backgroundView.isHidden = true
-//                self.refreshControl.endRefreshing()
+                self.refreshControl.endRefreshing()
                 switch status {
                 case .success:
                     self.collectionView.reloadData()
@@ -58,6 +57,7 @@ class MainGalleryViewController: UICollectionViewController {
 
     @objc private func fetch() {
         _viewModel.fetch()
+        
     }
 }
 
