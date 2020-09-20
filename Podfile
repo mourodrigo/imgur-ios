@@ -11,8 +11,8 @@ def common_pods
   pod 'RxSwift', '5.1.0'
   pod 'RxCocoa', '5.1.0'
   pod 'RxRelay', '5.1.0'
-
   pod 'RxGesture', '3.0.0'
+  pod 'SwiftyGif'
 end
 
 # Pods for the app
@@ -28,6 +28,7 @@ target 'imgur-ios' do
 
   #Networking
   pod 'Alamofire', '5.2'
+  pod 'AlamofireImage', '4.1.0'
 
   end
 
