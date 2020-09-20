@@ -16,21 +16,25 @@ class MainGalleryViewController: UICollectionViewController {
         setupOnLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        _viewModel.fetch()
+    }
+
     private func setupOnLoad() {
         self.navigationItem.title = _viewModel.moduleTitle
 
         self.collectionView.delegate = self
 
-        refreshControl.tintColor = UIColor.white
-        collectionView.refreshControl = refreshControl
-
-        refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
-        self.refreshControl.beginRefreshing()
+//        refreshControl.tintColor = UIColor.white
+//        collectionView.refreshControl = refreshControl
+//
+//        refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
+//        self.refreshControl.beginRefreshing()
 
         _viewModel.state.bind { (status) in
             DispatchQueue.main.async {
                 self.backgroundView.isHidden = true
-                self.refreshControl.endRefreshing()
+//                self.refreshControl.endRefreshing()
                 switch status {
                 case .success:
                     self.collectionView.reloadData()
@@ -43,10 +47,11 @@ class MainGalleryViewController: UICollectionViewController {
             }
         }.disposed(by: _disposeBag)
 
-        backgroundView.rx.tapGesture().bind { [weak self] _ in
+        backgroundView.rx.tapGesture().when(.recognized).subscribe({
+            [weak self] _ in
             self?.refreshControl.beginRefreshing()
             self?.fetch()
-        }.disposed(by: _disposeBag)
+        }).disposed(by: _disposeBag)
 
 
     }

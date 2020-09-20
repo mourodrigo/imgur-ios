@@ -6,6 +6,20 @@ enum MainGalleryStatus {
     case success
     case loading
     case error(error: Error)
+
+    static func == (lhs: MainGalleryStatus, rhs: MainGalleryStatus) -> Bool {
+        switch (lhs, rhs) {
+        case  (.success,.success):
+            return true
+        case (.loading, .loading):
+            return true
+        case let (.error(error: errorA), .error(error: errorB)):
+            return errorA.localizedDescription == errorB.localizedDescription
+        default:
+            return false
+        }
+    }
+
 }
 
 protocol MainGalleryViewModelProtocol {

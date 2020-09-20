@@ -28,7 +28,6 @@ class GalleryRepository: GalleryRepositoryProtocol {
 
     init(api: APIRequest = AFRequest()) {
         _api = api
-        fetch()
     }
 
     func fetch() {
