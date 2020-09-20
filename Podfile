@@ -1,4 +1,4 @@
-platform :ios, '13.5'
+platform :ios, '13.6'
 use_frameworks!
 
 supports_swift_versions '>= 5.0', '<= 5.1'
