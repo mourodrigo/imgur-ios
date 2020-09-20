@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  imgur-ios
-//
-//  Created by mourodrigo on 9/17/20.
-//  Copyright © 2020 mourodrigo. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -46,6 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        SharedLocator.shared.imageRepository.cleanCache()
     }
 
 
