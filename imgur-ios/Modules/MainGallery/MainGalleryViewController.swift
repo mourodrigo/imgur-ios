@@ -20,10 +20,9 @@ class MainGalleryViewController: UICollectionViewController {
         self.navigationItem.title = _viewModel.moduleTitle
 
         self.collectionView.delegate = self
-//        self.collectionView.dataSource = self
 
         refreshControl.tintColor = UIColor.white
-//        self.collectionView.refreshControl = refreshControl
+        collectionView.refreshControl = refreshControl
 
         refreshControl.addTarget(self, action: #selector(fetch), for: .valueChanged)
         self.refreshControl.beginRefreshing()
