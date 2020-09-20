@@ -22,9 +22,6 @@ target 'imgur-ios' do
   pod 'R.swift', '5.0.3'
   pod 'R.swift.Library', '5.0.1'
 
-  #ViewControllers
-  pod 'Cartography', '4.0.0'
-
   #Networking
   pod 'Alamofire', '5.2'
   pod 'AlamofireImage', '4.1.0'
